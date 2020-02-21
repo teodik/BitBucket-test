@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('print a message'){
             steps{
-                sh 'echo "webhook works let see"'
+                echo "webhook works let see"
             }
         }
     }
