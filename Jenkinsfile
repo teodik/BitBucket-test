@@ -3,7 +3,11 @@ pipeline{
     stages{
         stage('print a message'){
             steps{
+                cleanWs()
                 echo "webhook works let see"
+                script{
+                    scm_map = checkout scm
+                }
             }
         }
         stage('Git status'){
