@@ -15,7 +15,8 @@ pipeline{
                 script{
                     bat('git remote add github https://github.com/teodik/BitBucket.git')
                     bat('git remote -v')
-                    bat('git branch')
+                    bat('git branch --track bb origin/master')
+                    bat('git checkout bb')
                     bat('git checkout -b gb')
                     bat('git branch')
                     bat('dir')
