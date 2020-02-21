@@ -11,6 +11,7 @@ pipeline{
                 script{
                     bat('git remote add github https://github.com/teodik/BitBucket.git')
                     bat('git remote -v')
+                    bat('git branch')
                 }
             }
         }
