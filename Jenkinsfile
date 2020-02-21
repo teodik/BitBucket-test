@@ -9,7 +9,7 @@ pipeline{
         stage('Git status'){
             steps{
                 script{
-                    sh 'git remote -v'
+                    bat('git remote -v')
                 }
             }
         }
