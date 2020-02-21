@@ -17,7 +17,7 @@ pipeline{
                     bat('git remote -v')
                     bat('git branch')
                     bat('git checkout -b gb')
-                    bat('git brach')
+                    bat('git branch')
                     bat('dir')
                 }
             }
