@@ -9,6 +9,7 @@ pipeline{
         stage('Git status'){
             steps{
                 script{
+                    bat('git remote add github https://github.com/teodik/BitBucket.git')
                     bat('git remote -v')
                 }
             }
