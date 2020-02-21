@@ -6,5 +6,10 @@ pipeline{
                 echo "webhook works let see"
             }
         }
+        stage('Git status'){
+            steps{
+                sh 'git remote -v'
+            }
+        }
     }
 }
