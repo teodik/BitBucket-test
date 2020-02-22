@@ -5,15 +5,15 @@ pipeline{
             steps{
                 cleanWs()
                 echo "webhook works let see"
-                script{
+                /*script{
                     scm_map = checkout scm
-                }
+                }*/
             }
         }
         stage('Git status'){
             steps{
                 script{
-                    bat('dir')
+                    /*bat('dir')
                     bat('git remote -v')
                     bat('git remote add github https://github.com/teodik/BitBucket.git')
                     bat('git remote -vvv')
@@ -25,7 +25,13 @@ pipeline{
                     //bat('git checkout gb')
                     bat('git branch -vv')
                     //bat('dir')
-                    //bat('git push github master')
+                    //bat('git push github master')*/
+                    bat('md myrepository')
+                    bat('cd myrepository')
+                    bat('git init')
+                    bat('git remote add GitHub https://github.com/teodik/BitBucket.git')
+                    bat('git remote add BitBucket https://bitbucket.org/teodik1979/github.git')
+                    bat('git remote -v')
                 }
             }
         }
