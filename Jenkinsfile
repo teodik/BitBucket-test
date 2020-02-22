@@ -1,13 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage('print a message'){
+        stage('clean up working directory'){
             steps{
                 cleanWs()
                 bat('dir')
             }
         }
-        stage('Git status'){
+        stage('Synchrinizing BitBucket with GitHub'){
             steps{
                 script{
                     bat('md myrepository')
@@ -19,6 +19,11 @@ pipeline{
                     bat('git push -u GitHub master')
                 }
             }
+        }
+    }
+    post{
+        always{
+            cleanWs()
         }
     }
 }
