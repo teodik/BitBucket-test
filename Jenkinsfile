@@ -20,7 +20,7 @@ pipeline{
                     bat('git pull origin master')
                     bat('git branch --track bb origin/master')
                     bat('git checkout bb')
-                    bat('git branch --track gb github/master')
+                    //bat('git branch --track gb github/master')
                     bat('git checkout gb')
                     bat('git branch -vv')
                     bat('dir')
