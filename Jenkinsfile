@@ -32,9 +32,11 @@ pipeline{
                     bat('git remote add GitHub https://github.com/teodik/BitBucket.git')
                     bat('git remote add BitBucket https://bitbucket.org/teodik1979/github.git')
                     bat('git remote -v')
-                    bat('git checkout -b BB')
                     bat('git pull BitBucket master')
+                    bat('git branch --track BB BitBucket/master')
+                    bat('git checkout BB')
                     bat('dir')
+                    bat('git branch -vvv')
                 }
             }
         }
