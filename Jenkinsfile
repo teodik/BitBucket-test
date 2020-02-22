@@ -35,7 +35,7 @@ pipeline{
                     bat('git pull BitBucket master')
                     bat('git branch --track BB BitBucket/master')
                     bat('git checkout BB')
-                    bat('git checkou -b GH')
+                    bat('git checkout -b GH')
                     bat('dir')
                     bat('git branch -vvv')
                 }
