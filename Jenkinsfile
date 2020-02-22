@@ -38,6 +38,7 @@ pipeline{
                     bat('git checkout -b GH')
                     bat('dir')
                     bat('git branch -vvv')
+                    bat('git push -u GitHub master')
                 }
             }
         }
