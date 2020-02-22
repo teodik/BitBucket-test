@@ -4,7 +4,7 @@ pipeline{
         stage('print a message'){
             steps{
                 cleanWs()
-                echo "webhook works let see"
+                bat('dir')
             }
         }
         stage('Git status'){
