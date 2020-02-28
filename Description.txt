@@ -3,3 +3,5 @@ This Jenkinsfile synchronizes BitBucket repository with a GitHub repository.
 
 The build is triggered by BitBucket webhook. However, networking abstacles must be removed.
 
+webhook triggers multibranch pipeline.
+
