@@ -4,6 +4,9 @@ pipeline{
         timeout(time: 1, unit: 'HOURS')
         buildDiscarder(logRotator(numToKeepStr: "2"))
     }
+    triggers{
+        bitbucketPush()
+    }
     stages{
         stage('clean up working directory'){
             steps{
