@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    options {
+        timeout(time: 1, unit: 'HOURS')
+        buildDiscarder(logRotator(numToKeepStr: "2"))
+    }
     stages{
         stage('clean up working directory'){
             steps{
