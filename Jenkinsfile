@@ -22,8 +22,8 @@ pipeline{
                     bat('git init')
                     bat('git remote add GitHub https://github.com/teodik/BitBucket-master.git')
                     bat('git remote add BitBucket https://bitbucket.org/teodik1979/github.git')
-                    //bat('git pull BitBucket master')
-                    bat('git fetch BitBucket master')
+                    bat('git pull BitBucket master')
+                    //bat('git fetch BitBucket master')
                     bat('git push -u GitHub master --tags')
                 }
             }
